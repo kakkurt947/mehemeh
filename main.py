@@ -23,8 +23,8 @@ logging.basicConfig(level=logging.INFO)
 
 # Start Buttonu İcin Def Oluşturalım :)
 def button():
-	BUTTON=[[InlineKeyboardButton(text=" Owner",url="t.me/tommy47shelby")]]
-	BUTTON+=[[InlineKeyboardButton(text="📣 Kanal",url="https://t.me/tutkudestek")]]
+	BUTTON=[[InlineKeyboardButton(text=" Owner",url="t.me/parssahib")]]
+	BUTTON+=[[InlineKeyboardButton(text="📣 Kanal",url="https://t.me/botlardestek")]]
 	return InlineKeyboardMarkup(BUTTON)
 
 # Kullanıcı Start Komutunu Kullanınca Selam'layalım :)
@@ -32,7 +32,7 @@ def button():
 async def _(client, message):
 	user = message.from_user # Kullanıcın Kimliğini Alalım
 
-	await message.reply_text(text="**Merhaba {}!**\n\n__Ben Pyrogram Api İle Yazılmış Eğlence Botuyum :)__\n\n**📣 Kanalıma Katılın =>** [Lütfen Tıklayın](https://t.me/tutkudestek)\nDoğruluk mu? Cesaret mi? Oyuna başlamak için komut => /dc".format(
+	await message.reply_text(text="**Merhaba {}!**\n\n__Ben Pyrogram Api İle Yazılmış Eğlence Botuyum :)__\n\n**📣 Kanalıma Katılın =>** [Lütfen Tıklayın](https://t.me/parssahib)\nDoğruluk mu? Cesaret mi? Oyuna başlamak için komut => /dc".format(
 		user.mention, # Kullanıcı'nın Adı
 		),
 	disable_web_page_preview=True, # Etiketin Önizlemesi Olmaması İcin Kullanıyoruz
@@ -41,8 +41,8 @@ async def _(client, message):
 
 # Dc Komutu İcin Olan Buttonlar
 def d_or_c(user_id):
-	BUTTON = [[InlineKeyboardButton(text="? Doğruluk", callback_data = " ".join(["d_data",str(user_id)]))]]
-	BUTTON += [[InlineKeyboardButton(text="?? Cesaret", callback_data = " ".join(["c_data",str(user_id)]))]]
+	BUTTON = [[InlineKeyboardButton(text=" Doğruluk", callback_data = " ".join(["d_data",str(user_id)]))]]
+	BUTTON += [[InlineKeyboardButton(text=" Cesaret", callback_data = " ".join(["c_data",str(user_id)]))]]
 	return InlineKeyboardMarkup(BUTTON)
 
 # Dc Komutunu Oluşturalım
